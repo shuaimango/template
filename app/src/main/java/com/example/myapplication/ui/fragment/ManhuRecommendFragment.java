@@ -66,11 +66,6 @@ public class ManhuRecommendFragment extends BaseRecyclerviewFragment {
         super.initViews(parentView);
     }
 
-//    @Override
-//    public int getLayoutId() {
-//        return R.layout.fragment_videostar;
-//    }
-
     @Override
     public void setViews(View parentView) {
         super.setViews(parentView);
