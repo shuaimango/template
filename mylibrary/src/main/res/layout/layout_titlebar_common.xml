@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><!--文档声明，必须在第一行且左对齐。XML有还有一个1.1的版本，但不向下兼容，所以普通用1.0版本-->
+<com.hjq.bar.TitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />

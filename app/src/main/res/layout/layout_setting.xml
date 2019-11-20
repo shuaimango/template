@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#f3f3f3"
+             android:orientation="vertical"
+             android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_lock"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="解锁"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_stocklist"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="掘金"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="新手引导"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_checkVersion"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="检查新版本"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_cleandata"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="清除数据"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_notify"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="震动通知栏开关"
+            android:visibility="gone"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/sz_redmine"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="更新源"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/cyb_redmine"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone"
+            android:text="创业板高低点提醒"
+            android:textSize="16sp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:text="1.大盘阴盖阳逃；个股破新低逃；破近日阴线最低价逃；
+\n2.熊市，回踩箱体下方关键点位或尾盘才可出手抄底；一根长阳需3根阴线消化；
+\n3.熊市，深v、大涨第二天开盘逃，高开更要逃。最迟十点半前要清仓；
+\n4.个股当天大涨或涨停不回封必须逃。
+\n5.大盘连跌四天以上且收盘不破前低才可抄底。分时二次阳盖阴探底，且不破前低才能抄底
+\n6.真突破指突破十五分钟以上，且回踩不破"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="退出应用"
+        android:textSize="16sp"/>
+</FrameLayout>

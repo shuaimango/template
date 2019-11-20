@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_cover"
+        android:text="2019-09-24"
+        android:textColor="@color/black3"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginTop="5dp"
+        android:text="哈哈哈哈"
+        android:textColor="@color/black1"
+        android:textSize="14sp" />
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        app:background_normal="@color/gray8"
+        app:corner_radius="1dp">
+
+        <TextView
+            android:id="@+id/tv_discuz_master"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跟帖“猫女王”："
+            android:textColor="@color/black2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_discuz_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:layout_marginTop="5dp"
+            android:text="【冰雪奇缘2】强烈安利，限定周边、影票掉落中，宝宝站住，不许“冻”！"
+            android:textColor="@color/black1"
+            android:textSize="15sp" />
+    </com.ruffian.library.widget.RLinearLayout>
+</RelativeLayout>

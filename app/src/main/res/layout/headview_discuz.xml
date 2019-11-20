@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:text="礼让行人，真的安全吗？"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black1"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_viewNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:text="345"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/icon_view"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black3"
+        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/tv_replyNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_viewNum"
+        android:layout_marginLeft="60dp"
+        android:text="345"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/icon_reply"
+        android:drawablePadding="5dp"
+        android:textColor="@color/black3"
+        android:textSize="11sp" />
+
+
+</RelativeLayout>

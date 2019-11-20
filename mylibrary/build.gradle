@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    //【android support】
+//    api 'com.google.android.material:material:1.0.0'
+    api "com.android.support:support-annotations:${cfgs.androidSupportVersion}"
+    api "com.android.support:support-v4:${cfgs.androidSupportVersion}"
+    api "com.android.support:appcompat-v7:${cfgs.androidSupportVersion}"
+    api "com.android.support:recyclerview-v7:${cfgs.androidSupportVersion}"
+    api("com.android.support:support-media-compat:${cfgs.androidSupportVersion}")
+    api ("com.android.support:design:${cfgs.androidSupportVersion}")
+    api 'com.android.support:multidex:1.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    api 'jp.wasabeef:glide-transformations:4.0.1'
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.4'
+    //net
+    api 'com.lzy.net:okgo:3.0.4'
+    api 'com.lzy.net:okserver:2.0.5'
+    //util
+    //https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+    api 'com.blankj:utilcode:1.25.9'
+    api 'org.greenrobot:eventbus:3.1.1'
+    api 'com.alibaba:fastjson:1.1.71.android'
+    api 'com.yanzhenjie.permission:support:2.0.1'
+    //view
+    api 'com.hjq:titlebar:6.0'
+    api 'com.lxj:xpopup:1.8.8'
+    api 'me.yokeyword:fragmentation:1.3.7'
+    api 'com.just.agentweb:agentweb:4.1.2' // (必选)
+//    api 'com.github.MZCretin:WebViewUtils:1.0.0'
+    api 'com.github.SheHuan:NiceDialog:1.2.0'
+    api 'me.majiajie:pager-bottom-tab-strip:2.3.0'
+//    https://github.com/RuffianZhong/RWidgetHelper
+    api 'com.ruffian.library:RWidgetHelper:1.1.5'
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    api('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+
+}
+

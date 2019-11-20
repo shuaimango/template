@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#f3f3f3"
+             android:orientation="vertical"
+             android:paddingTop="32dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sz_redmine"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="上证高低点提醒"
+            android:drawablePadding="16dp"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:paddingRight="16dp"/>
+        <TextView
+            android:id="@+id/cyb_redmine"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="创业板高低点提醒"
+            android:drawablePadding="16dp"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackground"
+            android:paddingLeft="16dp"
+            android:drawableRight="@drawable/fragmentation_ic_right"
+            android:paddingRight="16dp"/>
+    </LinearLayout>
+</FrameLayout>

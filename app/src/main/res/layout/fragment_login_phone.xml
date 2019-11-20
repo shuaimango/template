@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_common"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <com.ruffian.library.widget.REditText
+                    android:id="@+id/phoneEt"
+                    style="@style/edittext_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/black3"
+                    android:hint="请输入您的手机号登录或注册"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/white"
+                    app:border_color_normal="@color/colorAccent"
+                    app:border_width_normal="1dp"
+                    app:corner_radius="22.5dp"
+                    app:icon_src_normal="@mipmap/bar_icon_back_black"/>
+
+                <TextView
+                    android:id="@+id/getAuthCodeBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="@string/obtain_verif_code"
+                    android:textColor="@color/app_color"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.ruffian.library.widget.REditText
+                    android:id="@+id/authCodeEt"
+                    style="@style/edittext_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/black3"
+                    android:hint="请输入您的验证码"
+                    android:maxLength="11"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/reg_bt"
+                android:layout_width="fill_parent"
+                android:layout_height="34dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:text="下一步"
+                android:textColor="@color/black"
+                style="@style/bottom_button"
+                android:textSize="15sp"
+                app:background_normal="@color/colorAccent"
+                app:background_pressed="@color/red"
+                app:corner_radius="17dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
