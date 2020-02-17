@@ -23,7 +23,7 @@ public class ManhuaAdapter extends BaseQuickAdapter<Manhua, BaseViewHolder> {
         ImageView imageViewCoverImage = holder.getView(R.id.iv_cover);
         TextView tv_date = holder.getView(R.id.tv_date);
         TextView tv_zan = holder.getView(R.id.tv_zan);
-        Glide.with(MyApplication.mInstance)
+        Glide.with(MyApplication.mContext)
                 .load( item.cover)
                 .into(imageViewCoverImage);
         android.view.ViewGroup.LayoutParams lp = imageViewCoverImage.getLayoutParams();

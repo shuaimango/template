@@ -12,7 +12,6 @@ import com.blankj.utilcode.util.ConvertUtils;
 import com.blankj.utilcode.util.SPStaticUtils;
 import com.example.myapplication.entity.User;
 import com.example.myapplication.ui.fragment.MeFragment;
-import com.example.myapplication.util.ImageLoader;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
@@ -38,7 +37,7 @@ import okhttp3.OkHttpClient;
 public class MyApplication extends MultiDexApplication {
     public static boolean isFirstEnter;
     public static User user;
-    public static MyApplication mInstance = null;
+    public static MyApplication mContext = null;
     public static int mScreenWidthPx, mScreenHeightPx;
     public static float mScreenWidthDp, mScreenHeightDp;
     static {
@@ -68,8 +67,8 @@ public class MyApplication extends MultiDexApplication {
         try {
             if (isMainProcess()) {
                 isFirstEnter = true;
-                mInstance = this;
-                DisplayMetrics dm = mInstance.getResources().getDisplayMetrics();
+                mContext = this;
+                DisplayMetrics dm = mContext.getResources().getDisplayMetrics();
                 mScreenWidthPx = dm.widthPixels;
                 mScreenHeightPx = dm.heightPixels;
                 mScreenWidthDp = ConvertUtils.dp2px(mScreenWidthPx);
@@ -97,7 +96,7 @@ public class MyApplication extends MultiDexApplication {
 
     public static void initPush() {
         // 开启推送服务
-//        XGPuConfig.enableDebug(mInstance, AppConstant.isDebug); // 开启logcat输出，方便debug，发布时请关闭
+//        XGPuConfig.enableDebug(mContext, AppConstant.isDebug); // 开启logcat输出，方便debug，发布时请关闭
 //        XGIOperateCallback callback = new XGIOperateCallback() {
 //            @Override
 //            public void onSuccess(Object data, int flag) {
@@ -109,18 +108,18 @@ public class MyApplication extends MultiDexApplication {
 //                Log.e("TPu", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
 //            }
 //        };
-//        XGPuManager.registerPu(mInstance, callback);
+//        XGPuManager.registerPu(mContext, callback);
 //                UserInfo userInfo = Interactor_user_local.getUserInfo();
 //        if(userInfo==null|| TextUtils.isEmpty(userInfo.u_mobile)){
-//            XGPuManager.registerPu(mInstance, callback);
+//            XGPuManager.registerPu(mContext, callback);
 //        }else{
-//            XGPuManager.registerPu(mInstance,userInfo.u_mobile,callback);
+//            XGPuManager.registerPu(mContext,userInfo.u_mobile,callback);
 //        }
 //        XGCustomPuNotificationBuilder build = new XGCustomPuNotificationBuilder();
-//        build.setSound(RingtoneManager.getActualDefaultRingtoneUri(mInstance, RingtoneManager.TYPE_ALARM)) // 设置声音
+//        build.setSound(RingtoneManager.getActualDefaultRingtoneUri(mContext, RingtoneManager.TYPE_ALARM)) // 设置声音
 //                // setSound( Uri.parse("android.resource://" + getPackageName()// + "/" + R.raw.wind)) 设定Raw下指定声音文件
 //                .setDefaults(Notification.DEFAULT_VIBRATE); // 振动
-//        XGPuManager.setDefaultNotificationBuilder(mInstance, build);  //这个是替换默认的通知，build是上面的那段代码的，这样通知就是使用我们自定义的形式了。
+//        XGPuManager.setDefaultNotificationBuilder(mContext, build);  //这个是替换默认的通知，build是上面的那段代码的，这样通知就是使用我们自定义的形式了。
     }
 
     private void initHttp() {
