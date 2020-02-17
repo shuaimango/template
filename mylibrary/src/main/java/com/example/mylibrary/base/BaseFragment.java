@@ -32,7 +32,6 @@ public abstract class BaseFragment extends SupportFragment implements IPageInit,
     public void onClick(View v) {
         switch (v.getId()) {
 //            case R.id.back:
-//                getActivity().onBackPressed();
 ////                Util_skipPage.fragmentBack(getActivity());
 //                break;
         }
