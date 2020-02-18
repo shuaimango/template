@@ -89,7 +89,7 @@ public class MeFragment extends BaseFragment {
         String userStr = SPStaticUtils.getString(MeFragment.USER);
         if(!TextUtils.isEmpty(userStr)){
             user=JSON.parseObject(userStr,User.class);
-            ImageLoader.displayCircleImg( iv_avatar, user.avatarUrl);
+            ImageLoader.displayCircleImg(user.avatarUrl, iv_avatar);
         }
     }
 }

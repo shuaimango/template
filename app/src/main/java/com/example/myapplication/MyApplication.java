@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 import android.app.ActivityManager;
 import android.content.Context;
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDexApplication;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
@@ -39,7 +39,6 @@ public class MyApplication extends MultiDexApplication {
     public static User user;
     public static MyApplication mContext = null;
     public static int mScreenWidthPx, mScreenHeightPx;
-    public static float mScreenWidthDp, mScreenHeightDp;
     static {
         //设置全局的Header构建器
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
@@ -71,8 +70,6 @@ public class MyApplication extends MultiDexApplication {
                 DisplayMetrics dm = mContext.getResources().getDisplayMetrics();
                 mScreenWidthPx = dm.widthPixels;
                 mScreenHeightPx = dm.heightPixels;
-                mScreenWidthDp = ConvertUtils.dp2px(mScreenWidthPx);
-                mScreenHeightDp = ConvertUtils.dp2px(mScreenHeightPx);
                 initPush();
                 initHttp();
             }

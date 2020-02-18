@@ -15,7 +15,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginTop="15dp"
-        app:srcCompat="@mipmap/avatar_default" />
+        app:srcCompat="@drawable/avatar_default" />
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"

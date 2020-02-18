@@ -31,7 +31,7 @@
         android:layout_below="@+id/tv_content"
         android:text="345"
         android:gravity="center"
-        android:drawableLeft="@mipmap/icon_view"
+        android:drawableLeft="@drawable/icon_view"
         android:drawablePadding="5dp"
         android:layout_marginTop="5dp"
         android:textColor="@color/black3"
@@ -44,7 +44,7 @@
         android:layout_marginLeft="60dp"
         android:text="345"
         android:gravity="center"
-        android:drawableLeft="@mipmap/icon_reply"
+        android:drawableLeft="@drawable/icon_reply"
         android:drawablePadding="5dp"
         android:textColor="@color/black3"
         android:textSize="11sp" />

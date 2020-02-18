@@ -2,7 +2,6 @@ package com.example.myapplication.ui.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -10,14 +9,11 @@ import android.widget.EditText;
 
 import com.alibaba.fastjson.JSON;
 import com.blankj.utilcode.util.SPStaticUtils;
-import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.myapplication.R;
 import com.example.myapplication.entity.User;
 import com.example.mylibrary.base.BaseFragment;
 import com.hjq.bar.OnTitleBarListener;
-
-import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * 我的

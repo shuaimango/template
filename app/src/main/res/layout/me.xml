@@ -22,7 +22,6 @@
             android:textSize="16sp"
             android:background="?attr/selectableItemBackground"
             android:paddingLeft="16dp"
-            android:drawableRight="@drawable/fragmentation_ic_right"
             android:paddingRight="16dp"/>
         <TextView
             android:id="@+id/cyb_redmine"
@@ -34,7 +33,6 @@
             android:textSize="16sp"
             android:background="?attr/selectableItemBackground"
             android:paddingLeft="16dp"
-            android:drawableRight="@drawable/fragmentation_ic_right"
             android:paddingRight="16dp"/>
     </LinearLayout>
 </FrameLayout>

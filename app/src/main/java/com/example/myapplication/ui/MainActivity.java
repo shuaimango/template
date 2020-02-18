@@ -4,18 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import androidx.fragment.app.FragmentActivity;
+
 import com.example.myapplication.R;
 import com.example.myapplication.ui.fragment.LoginPhoneFragment;
 import com.example.mylibrary.util.Util_view;
 
-import me.yokeyword.fragmentation.SupportActivity;
 
 
 /**
  *
  */
 
-public class MainActivity extends SupportActivity {
+public class MainActivity extends FragmentActivity {
     ImageView iv_splash;
 
     @Override

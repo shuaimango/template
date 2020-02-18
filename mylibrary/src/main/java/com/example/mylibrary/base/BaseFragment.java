@@ -7,16 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.mylibrary.R;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 
 import org.greenrobot.eventbus.EventBus;
 
-import me.yokeyword.fragmentation.SupportFragment;
 
 
-public abstract class BaseFragment extends SupportFragment implements IPageInit, View.OnClickListener {
+public abstract class BaseFragment extends Fragment implements IPageInit, View.OnClickListener {
     public static final String EXTRA_DATA_STRING = "dataString";
     public static final String TITLE = "title";
     public String TAG;

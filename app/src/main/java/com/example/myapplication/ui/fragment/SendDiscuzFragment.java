@@ -1,30 +1,24 @@
 package com.example.myapplication.ui.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.alibaba.fastjson.JSON;
 import com.blankj.utilcode.util.CollectionUtils;
+import com.blankj.utilcode.util.FragmentUtils;
 import com.blankj.utilcode.util.SPStaticUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.myapplication.MyApplication;
 import com.example.myapplication.R;
 import com.example.myapplication.entity.Discuz;
-import com.example.myapplication.entity.Discuz;
-import com.example.myapplication.entity.User;
 import com.example.mylibrary.base.BaseFragment;
 import com.hjq.bar.OnTitleBarListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * 我的
@@ -57,7 +51,7 @@ public class SendDiscuzFragment extends BaseFragment {
 
             @Override
             public void onLeftClick(View v) {
-                onBackPressedSupport();
+                FragmentUtils.pop(getFragmentManager());
             }
 
             @Override

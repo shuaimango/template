@@ -1,8 +1,8 @@
 package com.example.myapplication.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.collection.ArrayMap;
+
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.blankj.utilcode.util.CollectionUtils;
-import com.blankj.utilcode.util.ConvertUtils;
 import com.blankj.utilcode.util.SPStaticUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -22,16 +21,10 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.myapplication.MyApplication;
 import com.example.myapplication.R;
 import com.example.myapplication.constant.CommonKey;
-import com.example.myapplication.constant.ServerUrl;
 import com.example.myapplication.entity.Discuz;
 import com.example.myapplication.entity.DiscuzComment;
 import com.example.myapplication.ui.adapter.DiscuzCommentAdapter;
 import com.example.mylibrary.base.BaseRecyclerviewFragment;
-import com.example.mylibrary.util.SpaceItemDecoration;
-import com.example.myapplication.util.Util_skipPage;
-import com.hjq.bar.OnTitleBarListener;
-import com.lzy.okgo.OkGo;
-import com.lzy.okgo.model.HttpParams;
 
 import java.util.ArrayList;
 import java.util.List;

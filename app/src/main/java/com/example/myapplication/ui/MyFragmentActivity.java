@@ -1,27 +1,27 @@
 package com.example.myapplication.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+
 import android.text.TextUtils;
 import android.view.View;
 
+import com.blankj.utilcode.util.FragmentUtils;
 import com.example.mylibrary.R;
 import com.example.mylibrary.base.BaseFragment;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
-
-import me.yokeyword.fragmentation.ISupportFragment;
-import me.yokeyword.fragmentation.SupportActivity;
 
 
 /**
  *
  */
 
-public class MyFragmentActivity extends SupportActivity {
+public class MyFragmentActivity extends FragmentActivity {
     public static final String CLASSNAME = "CLASSNAME";
     protected Fragment showFragment = null;
     public Bundle extras;
@@ -41,7 +41,7 @@ public class MyFragmentActivity extends SupportActivity {
 
                         @Override
                         public void onLeftClick(View v) {
-                            onBackPressedSupport();
+                            finish();
                         }
 
                         @Override
@@ -65,24 +65,27 @@ public class MyFragmentActivity extends SupportActivity {
             String className = extras.getString(CLASSNAME);
             showFragment = (Fragment) Class.forName(className).newInstance();
             showFragment.setArguments(extras);
-            if (showFragment instanceof ISupportFragment) {
-                if (!showFragment.isAdded()) {
-                    loadRootFragment(R.id.activity_fragment, (ISupportFragment) showFragment);
-                }
-            } else {
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                if (showFragment.isAdded()) {
-                    ft.show(showFragment);
-                } else {
-                    ft.add(R.id.activity_fragment, showFragment);
-                }
-                ft.commitAllowingStateLoss();
-            }
+            MyFragmentActivity.showFragment(getSupportFragmentManager(), showFragment, R.id.activity_fragment);
+//                FragmentManager fm = getSupportFragmentManager();
+//                FragmentTransaction ft = fm.beginTransaction();
+//                if (showFragment.isAdded()) {
+//                    ft.show(showFragment);
+//                } else {
+//                    ft.add(R.id.activity_fragment, showFragment);
+//                }
+//                ft.commitAllowingStateLoss();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-
+    public static void showFragment(FragmentManager fm, Fragment currentFragment, int id) {
+        if (currentFragment.isAdded()) {
+            FragmentUtils.show(currentFragment);
+        } else {
+            if (fm.findFragmentByTag(currentFragment.getClass().getSimpleName()) == null) {
+                FragmentUtils.add(fm, currentFragment, id, currentFragment.getClass().getSimpleName());
+            }
+        }
+    }
 }

@@ -1,9 +1,9 @@
 package com.example.myapplication.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
-import android.support.v7.widget.LinearLayoutManager;
-import android.text.TextUtils;
+import androidx.collection.ArrayMap;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import android.view.View;
 
 import com.alibaba.fastjson.JSON;
@@ -14,15 +14,12 @@ import com.blankj.utilcode.util.SPStaticUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.myapplication.R;
 import com.example.myapplication.constant.CommonKey;
-import com.example.myapplication.constant.ServerUrl;
 import com.example.myapplication.entity.Discuz;
 import com.example.myapplication.ui.adapter.DiscuzAdapter;
 import com.example.mylibrary.base.BaseRecyclerviewFragment;
 import com.example.mylibrary.util.SpaceItemDecoration;
 import com.example.myapplication.util.Util_skipPage;
 import com.hjq.bar.OnTitleBarListener;
-import com.lzy.okgo.OkGo;
-import com.lzy.okgo.model.HttpParams;
 
 import java.util.ArrayList;
 import java.util.List;

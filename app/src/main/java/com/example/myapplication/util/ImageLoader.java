@@ -3,7 +3,7 @@ package com.example.myapplication.util;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -46,7 +46,7 @@ public class ImageLoader {
             return;
         }
         if(TextUtils.isEmpty(imgUrl)){
-            Glide.with(context==null? MyApplication.mContext :context).load(R.mipmap.app_icon)
+            Glide.with(context==null? MyApplication.mContext :context).load(R.drawable.app_icon)
                     .into(avatar);
             return;
         }

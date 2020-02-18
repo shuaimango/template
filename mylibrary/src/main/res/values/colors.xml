@@ -42,7 +42,6 @@
      <color name="white_0.3alpha">#4dffffff</color>
      <color name="white_0.2alpha">#33ffffff</color>
      <color name="white_0.1alpha">#1affffff</color>
-     <color name="white">#FFFFFF</color>
      <color name="transparent_0.2">#33000000</color> &lt;!&ndash;icon press的透明度 &ndash;&gt;
      <color name="transparent_0.5">#80000000</color>
      <color name="transparent_0.7">#b3000000</color>-->
@@ -69,10 +68,13 @@
     * 10% 1A
     * 5% 0D
     * 0% 00
+
     <color name="transparent">#00000000</color><!-- 透明 -->
     <color name="translucence8">#33000000</color> <!-- 0.8透明 -->
     <color name="translucence">#e0000000</color> <!-- 半透明 -->
     <color name="wathet_blue">#1199dd</color>
+    <color name="white">#FFFFFF</color>
+
     <!-- 浅蓝色 -->
     <color name="ivory">#FFFFF0</color>
     <!-- 象牙色 -->

@@ -1,11 +1,9 @@
 package com.example.myapplication.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
-import android.view.View;
+import androidx.collection.ArrayMap;
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.myapplication.R;
 import com.example.myapplication.entity.Manhua;
 
 import java.util.ArrayList;

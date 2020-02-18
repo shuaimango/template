@@ -74,7 +74,7 @@ public class MyInfoFragment extends BaseFragment {
                             ToastUtils.showShort("图片要小于1M");
                             return;
                         }
-                        ImageLoader.displayCircleImg( iv_avatar,path);
+                        ImageLoader.displayCircleImg( path,iv_avatar);
                         ModifynickNameFragment.saveUser("",path);
 //                        HttpParams params = new HttpParams();
 //                        params.put("face", file);
@@ -139,7 +139,7 @@ public class MyInfoFragment extends BaseFragment {
         String userStr = SPStaticUtils.getString(MeFragment.USER);
         if(!TextUtils.isEmpty(userStr)){
             user=JSON.parseObject(userStr, User.class);
-            ImageLoader.displayCircleImg( iv_avatar, user.avatarUrl);
+            ImageLoader.displayCircleImg(  user.avatarUrl,iv_avatar);
             tv_nickname.setText(user.nickname);
         }
     }

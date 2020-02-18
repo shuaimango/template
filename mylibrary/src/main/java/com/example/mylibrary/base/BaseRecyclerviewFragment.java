@@ -1,13 +1,14 @@
 package com.example.mylibrary.base;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.alibaba.fastjson.JSONObject;
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.example.mylibrary.R;
 import com.example.mylibrary.util.Util_collection;
 import com.lzy.okgo.model.Response;
@@ -22,7 +23,7 @@ import java.util.List;
  * Created by young
  */
 
-public abstract class BaseRecyclerviewFragment<T> extends BaseFragment implements BaseQuickAdapter.OnItemClickListener {
+public abstract class BaseRecyclerviewFragment<T> extends BaseFragment implements OnItemClickListener {
     public int page;
     protected RecyclerView mRecyclerView;
     protected RefreshLayout mRefreshLayout;
